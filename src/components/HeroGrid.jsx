@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 
 function HeroGride() {
   return (
@@ -11,14 +12,28 @@ function HeroGride() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="relative flex flex-col items-center justify-center h-full bg-black/40 gap-8">
-          <div className="flex border-2 px-7 w-7xl justify-center items-center">
+        <motion.div
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="relative flex flex-col items-center justify-center h-full bg-black/60 gap-8"
+        >
+          <div
+            className="flex px-7 w-7xl justify-center items-center
+          shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)]"
+          >
             <h1 className="font-orbitron text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
               Sakuni Sandakalmi
             </h1>
           </div>
 
-          <div className="flex border-2 px-7 w-7xl justify-center items-center">
+          <div
+            className="flex px-7 w-7xl justify-center items-center
+          shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)]"
+          >
             <h1 className="font-orbitron text-4xl font-light text-cyan-300">
               Software Engineer
             </h1>
@@ -32,9 +47,9 @@ function HeroGride() {
             </h1>
           </div>
 
-          <div className="flex">
+          <div className="flex shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] rounded-xl">
             <Button
-              className="font-orbitron px-8 py-6 text-lg text-foreground"
+              className="font-orbitron px-8 py-6 text-lg bg-transparent border-none text-white"
               variant="outline"
               size="lg"
             >
@@ -42,7 +57,7 @@ function HeroGride() {
               Download Resume
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

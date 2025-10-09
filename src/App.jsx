@@ -1,6 +1,9 @@
 import AboutMe from "./components/AboutMe";
 import HeroGride from "./components/HeroGrid";
 import { motion } from "framer-motion";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Certifications from "./components/Certifications";
 
 const App = () => {
   return (
@@ -18,7 +21,7 @@ const App = () => {
         <AboutMe />
       </motion.main> */}
 
-      <main className="flex flex-col gap-10">
+      <main className="flex flex-col">
         <HeroGride />
 
         <div className="relative w-full">
@@ -29,13 +32,14 @@ const App = () => {
             muted
             playsInline
           >
-            <source src="/assets/videos/video4.mp4" type="video/mp4" />
+            <source src="/assets/videos/video6.mp4" type="video/mp4" />
           </video>
 
-          <div className="relative z-10 bg-black/40">
+          <div className="relative z-10 bg-black/60">
             <AboutMe />
-
-            <AboutMe />
+            <Skills />
+            <Projects />
+            <Certifications />
           </div>
         </div>
       </main>

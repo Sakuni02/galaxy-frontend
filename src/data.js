@@ -1,33 +1,38 @@
+import { color } from "framer-motion";
 import { Code2, Server, Database, Smartphone, MonitorSmartphone, Github, ExternalLink, Code } from "lucide-react";
 
 const skillCategories = [
     {
         title: "Frontend Development",
-        icon: Code2Icon,
-        color: "67deec8e2b2c146578729f2f",
-        skills: ["React", "Tailwind CSS", "TypeScript", "HTML5", "CSS3", "JavaScript"]
+        icon: Code2,
+        iconColor: "from-purple-500 via-pink-300 to-pink-400",
+        skills: ["React", "Tailwind CSS", "TypeScript", "HTML5", "CSS3", "JavaScript", "Bootstrap"]
     },
     {
         title: "Backend Development",
         icon: Server,
+        iconColor: "from-blue-600 via-cyan-500 to-cyan-300",
         color: "from-nebula-blue to-cosmic-teal",
         skills: ["Express.js", "Spring Boot", "JPA", "Java", "Node.js", "RESTful APIs"]
     },
     {
         title: "Database Technologies",
         icon: Database,
+        iconColor: "from-cyan-600 via-lime-300 to-orange-200",
         color: "from-cosmic-teal to-cosmic-gold",
         skills: ["MongoDB", "PostgreSQL", "Firebase", "SQL", "Database Design"]
     },
     {
         title: "Mobile Development",
         icon: Smartphone,
+        iconColor: "from-pink-400 via-fuchsia-400 to-fuchsia-600",
         color: "from-nebula-pink to-nebula-purple",
         skills: ["React Native", "Android", "iOS", "Cross-platform Apps"]
     },
     {
         title: "DevOps & Tools",
         icon: MonitorSmartphone,
+        iconColor: "from-yellow-300 via-red-200 to-indigo-500",
         color: "from-cosmic-gold to-nebula-blue",
         skills: ["Docker", "Git", "GitHub", "Render", "CI/CD", "Cloud Services"]
     }
@@ -38,6 +43,8 @@ const skillCategories = [
 const projects = [
     {
         title: "E-Commerce Platform",
+        color: "from-purple-900/60 via-indigo-800/55 to-indigo-950/50",
+        iconColor: "from-purple-500 to-blue-500",
         description: "Full-stack e-commerce solution with real-time inventory management, secure payment integration, and responsive design. Built for scalability and performance.",
         techStack: ["React", "Node.js", "MongoDB", "Stripe"],
         githubUrl: "#",
@@ -45,7 +52,9 @@ const projects = [
         gradient: "from-nebula-purple via-nebula-blue to-cosmic-teal"
     },
     {
-        title: "Task Management App",
+        title: "E-Commerce Platform",
+        color: "from-emerald-300/60 via-amber-300/55 to-red-300/50",
+        iconColor: "from-yellow-500 to-blue-500",
         description: "Collaborative task management application with real-time updates, team workspaces, and advanced filtering. Optimized for productivity.",
         techStack: ["React", "Firebase", "Tailwind CSS"],
         githubUrl: "#",
@@ -54,6 +63,8 @@ const projects = [
     },
     {
         title: "Social Media Dashboard",
+        color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
+        iconColor: "from-pink-400 via-purple-500 to-purple-700",
         description: "Analytics dashboard for social media metrics with beautiful data visualizations, custom reports, and API integrations.",
         techStack: ["TypeScript", "Express.js", "PostgreSQL", "Chart.js"],
         githubUrl: "#",
@@ -62,6 +73,8 @@ const projects = [
     },
     {
         title: "Mobile Fitness Tracker",
+        color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
+        iconColor: "from-yellow-500 to-blue-500",
         description: "Cross-platform fitness tracking mobile app with workout plans, progress monitoring, and social features for motivation.",
         techStack: ["React Native", "Firebase", "Redux"],
         githubUrl: "#",
@@ -69,20 +82,46 @@ const projects = [
     },
     {
         title: "AI Content Generator",
+        color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
+        iconColor: "from-yellow-500 to-blue-500",
         description: "AI-powered content generation tool using modern LLM APIs. Features template creation, custom prompts, and content optimization.",
         techStack: ["React", "OpenAI API", "Spring Boot", "Docker"],
         githubUrl: "#",
         demoUrl: "#",
         gradient: "from-cosmic-gold via-nebula-pink to-nebula-purple"
     },
-    {
-        title: "Real-Time Chat Application",
-        description: "Modern chat application with end-to-end encryption, group chats, file sharing, and video calling capabilities.",
-        techStack: ["React", "Socket.io", "Node.js", "WebRTC"],
-        githubUrl: "#",
-        demoUrl: "#",
-        gradient: "from-nebula-purple via-cosmic-teal to-nebula-blue"
-    }
 ];
 
-export { skillCategories, projects };
+const certifications = [
+    {
+        title: "Diploma In Software Engineering",
+        iconColor: "from-purple-500 via-indigo-400 to-cyan-300",
+        color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
+        issuer: "UK Awards",
+        date: "2024",
+    },
+    {
+        title: "Higher Diploma in Software Engineering",
+        iconColor: "from-green-400 via-emerald-400 to-amber-200",
+        color: "from-pink-900/60 via-lime-800/55 to-purple-800/50",
+        issuer: "UK Awards",
+        date: "2023",
+    },
+    {
+        title: "Graduate Diploma in Software Engineering",
+        iconColor: "from-yellow-300 via-orange-300 to-red-400",
+        color: "from-red-700/60 via-gray-800/55 to-orange-950/50",
+        issuer: "UK Awards",
+        date: "2023",
+    },
+    {
+        title: "Docker Certified Associate",
+        iconColor: "from-fuchsia-400 via-purple-500 to-indigo-600",
+        color: "from-green-700/60 via-blue-700/50 to-yellow-700/55",
+        issuer: "Docker Inc.",
+        date: "2023",
+    },
+
+];
+
+export { skillCategories, projects, certifications };

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Certifications from "./components/Certifications";
+import Resume from "./components/Resume";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -32,7 +34,7 @@ const App = () => {
             muted
             playsInline
           >
-            <source src="/assets/videos/video6.mp4" type="video/mp4" />
+            <source src="/assets/videos/video4.mp4" type="video/mp4" />
           </video>
 
           <div className="relative z-10 bg-black/60">
@@ -40,6 +42,8 @@ const App = () => {
             <Skills />
             <Projects />
             <Certifications />
+            <Resume />
+            <Footer />
           </div>
         </div>
       </main>

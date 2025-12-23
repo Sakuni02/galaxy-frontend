@@ -27,7 +27,8 @@ function Resume() {
         className="flex px-4 sm:px-7 text-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)]"
       >
         <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-          Download My Resume
+          {/* Download My Resume */}
+          Resume (Available Soon)
         </h1>
       </motion.div>
 
@@ -41,8 +42,11 @@ function Resume() {
         className="flex w-full max-w-3xl justify-center items-center text-center px-2"
       >
         <h1 className="text-base sm:text-lg md:text-xl text-muted">
-          Get a comprehensive overview of my experience, skills, and
-          achievements in a beautifully crafted document
+          {/* Get a comprehensive overview of my experience, skills, and
+          achievements in a beautifully crafted document */}
+          My resume is currently being finalized and will be available for
+          download soon.
+          {/* Until then, it can be shared upon request. */}
         </h1>
       </motion.div>
 
@@ -55,13 +59,22 @@ function Resume() {
         }}
         className="flex shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] rounded-xl"
       >
-        <Button
+        {/* <Button
           className="font-orbitron text-black !px-15 !py-8 text-lg bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 border-none hover:cursor-pointer"
           variant="outline"
           size="lg"
         >
           <Download className="w-5 h-5 mr-2" />
           Download Resume
+        </Button> */}
+        <Button
+          disabled
+          className="font-orbitron text-black !px-15 !py-8 text-lg bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 opacity-60 cursor-not-allowed"
+          variant="outline"
+          size="lg"
+        >
+          <Download className="w-5 h-5 mr-2" />
+          Resume Coming Soon
         </Button>
       </motion.div>
 
@@ -75,11 +88,14 @@ function Resume() {
       >
         <p className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-muted-foreground text-center px-2">
           <Circle className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-          PDF Format • 2 Pages • Last Updated: 2024
+          {/* PDF Format • 2 Pages • Last Updated: 2024 */}
+          PDF Format • Finalizing Content • Expected 2025
         </p>
         <p className="text-muted-foreground text-center mt-5 text-sm">
-          Includes detailed work experience, education, certifications, and
-          project portfolio
+          {/* Includes detailed work experience, education, certifications, and
+          project portfolio */}
+          Will include education, projects, and certifications currently in
+          progress
         </p>
       </motion.div>
     </div>

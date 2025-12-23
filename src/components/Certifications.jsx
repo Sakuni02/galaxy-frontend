@@ -8,12 +8,13 @@ function Certifications() {
     <div className="flex flex-col items-center gap-5 mt-24 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       <div className="flex w-full max-w-5xl justify-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] text-white text-center">
         <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-          Certifications
+          Certifications (In Progress)
         </h1>
       </div>
 
       <div className="text-base sm:text-lg md:text-xl text-white text-center px-2">
-        <h1>Professional credentials across the technology spectrum</h1>
+        {/* <h1>Professional credentials across the technology spectrum</h1> */}
+        <h1>Professional certifications currently in progress</h1>
       </div>
 
       <motion.div
@@ -41,7 +42,10 @@ function Certifications() {
                   <Award className="w-5 h-5 text-black" />
                 </div>
 
-                <CheckCircle className="w-5 h-5 text-cyan-500" />
+                {/* <CheckCircle className="w-5 h-5 text-cyan-500" /> */}
+                <span className="text-xs px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 font-semibold flex justify-center items-center">
+                  In Progress
+                </span>
               </div>
               <div className="flex">
                 <h1 className="text-base sm:text-lg md:text-xl font-orbitron font-heading font-bold">

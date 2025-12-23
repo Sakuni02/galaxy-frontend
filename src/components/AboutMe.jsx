@@ -109,12 +109,11 @@ function AboutMe() {
                 full-stack development
               </span>
               <span>, </span>
-              <span className="text-cyan-300 font-semibold">
+              {/* <span className="text-cyan-300 font-semibold">
                 mobile applications
-              </span>{" "}
-              and cloud technologies, I bring a comprehensive approach to every
-              project. I believe in writing clean, maintainable code that stands
-              the test of time.
+              </span>{" "} */}
+              I bring a comprehensive approach to every project. I believe in
+              writing clean, maintainable code that stands the test of time.
             </p>
           </div>
         </motion.div>

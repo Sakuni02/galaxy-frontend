@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 function Resume() {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 mt-50 pb-50">
+    <div className="flex flex-col items-center gap-8 sm:gap-10 mt-24 pb-24 px-4 sm:px-6 max-w-7xl mx-auto">
       <motion.div
         animate={{ y: [0, -15, 0] }}
         transition={{
@@ -14,7 +14,7 @@ function Resume() {
         }}
         className="flex bg-gradient-to-br from-purple-500 to-blue-500 p-6 rounded-full"
       >
-        <FileText className="w-16 h-16 text-black" />
+        <FileText className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 text-black" />
       </motion.div>
 
       <motion.div
@@ -24,9 +24,9 @@ function Resume() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex px-7 shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)]"
+        className="flex px-4 sm:px-7 text-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)]"
       >
-        <h1 className="font-orbitron text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
           Download My Resume
         </h1>
       </motion.div>
@@ -38,9 +38,9 @@ function Resume() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex w-3xl justify-center items-center text-center"
+        className="flex w-full max-w-3xl justify-center items-center text-center px-2"
       >
-        <h1 className="text-xl text-muted">
+        <h1 className="text-base sm:text-lg md:text-xl text-muted">
           Get a comprehensive overview of my experience, skills, and
           achievements in a beautifully crafted document
         </h1>
@@ -73,7 +73,7 @@ function Resume() {
           ease: "easeInOut",
         }}
       >
-        <p className="flex items-center justify-center gap-4 text-muted-foreground">
+        <p className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-muted-foreground text-center px-2">
           <Circle className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
           PDF Format • 2 Pages • Last Updated: 2024
         </p>

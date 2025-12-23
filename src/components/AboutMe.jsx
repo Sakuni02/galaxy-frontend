@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function AboutMe() {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 lg:mx-40 pt-10">
+    <div className="flex flex-col items-center gap-5 pt-10 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       <motion.div
         animate={{ y: [0, -15, 0] }}
         transition={{
@@ -11,9 +11,9 @@ function AboutMe() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] w-6xl justify-center"
+        className="flex justify-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] w-full max-w-4xl"
       >
-        <h1 className="font-orbitron text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="font-orbitron text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
           About Me
         </h1>
       </motion.div>
@@ -48,7 +48,7 @@ function AboutMe() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex justify-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] text-white text-lg p-8 text-center rounded-3xl"
+        className="flex justify-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] text-white text-base sm:text-lg p-5 sm:p-8 text-center rounded-3xl max-w-4xl"
       >
         <p>
           Hello! I'm{" "}
@@ -60,7 +60,7 @@ function AboutMe() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-6xl">
         <motion.div
           animate={{ y: [0, -15, 0] }}
           transition={{
@@ -68,7 +68,7 @@ function AboutMe() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="lg:col-span-1 grid-cols-1 flex items-start gap-4 shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] rounded-3xl p-8"
+          className="shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] rounded-3xl flex items-start gap-4 p-5 sm:p-8"
         >
           <div className="flex items-center justify-center rounded-full p-3  bg-gradient-to-r from-purple-500 to-blue-500">
             <Sparkles className="w-6 h-6 text-white" />
@@ -143,13 +143,13 @@ function AboutMe() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex gap-4 w-6xl justify-center text-center items-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] text-white rounded-3xl p-8"
+        className="flex gap-4 justify-center w-full max-w-4xl text-center items-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] text-white rounded-3xl p-8"
       >
         <div className="rounded-full p-3  bg-gradient-to-r from-purple-500 to-blue-500">
           <Sparkles className="w-7 h-7 text-white" />
         </div>
 
-        <h1 className="text-xl italic font-semibold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="text-base sm:text-lg md:text-xl italic font-semibold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
           "Code is poetry, and every project is a canvas for innovation"
         </h1>
       </motion.div>

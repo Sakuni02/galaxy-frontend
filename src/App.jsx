@@ -10,25 +10,12 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
-      {/* <motion.main
-        animate={{ y: [0, -20, 0] }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="flex flex-col gap-10"
-      >
-        <HeroGride />
-        <AboutMe />
-      </motion.main> */}
-
       <main className="flex flex-col">
         <HeroGride />
 
         <div className="relative w-full">
           <video
-            className="fixed top-0 left-0 w-full h-full object-cover -z-10"
+            className="absolute md:fixed top-0 left-0 w-full h-full object-cover -z-10"
             autoPlay
             loop
             muted
@@ -37,7 +24,7 @@ const App = () => {
             <source src="/assets/videos/video4.mp4" type="video/mp4" />
           </video>
 
-          <div className="relative z-10 bg-black/60">
+          <div className="relative z-10 bg-black/60 px-4 sm:px-6 md:px-10">
             <AboutMe />
             <Skills />
             <Projects />

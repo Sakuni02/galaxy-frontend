@@ -42,13 +42,25 @@ const skillCategories = [
 
 const projects = [
     {
-        title: "E-Commerce Platform",
+        title: "ElectroMart - E-Commerce Platform",
         color: "from-purple-900/60 via-indigo-800/55 to-indigo-950/50",
         iconColor: "from-purple-500 to-blue-500",
-        description: "Full-stack e-commerce solution with real-time inventory management, secure payment integration, and responsive design. Built for scalability and performance.",
-        techStack: ["React", "Node.js", "MongoDB", "Stripe"],
-        githubUrl: "#",
-        demoUrl: "#",
+        description: "A full-stack e-commerce platform for electronics, featuring product listing, category filtering, cart management, Stripe payment integration, and order tracking.",
+        techStack: [
+            "React",
+            "Redux Toolkit",
+            "TailwindCSS",
+            "Framer Motion",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Stripe Checkout",
+            "Clerk (Authentication)",
+            "TypeScript"
+        ],
+        frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
+        demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
         gradient: "from-nebula-purple via-nebula-blue to-cosmic-teal"
     },
     {
@@ -56,9 +68,21 @@ const projects = [
         color: "from-emerald-300/60 via-amber-300/55 to-red-300/50",
         iconColor: "from-yellow-500 to-blue-500",
         description: "Collaborative task management application with real-time updates, team workspaces, and advanced filtering. Optimized for productivity.",
-        techStack: ["React", "Firebase", "Tailwind CSS"],
-        githubUrl: "#",
-        demoUrl: "#",
+        techStack: [
+            "React",
+            "Redux Toolkit",
+            "TailwindCSS",
+            "Framer Motion",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Stripe Checkout",
+            "Clerk (Authentication)",
+            "TypeScript"
+        ],
+        frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
+        demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
         gradient: "from-cosmic-teal via-cosmic-gold to-nebula-pink"
     },
     {
@@ -67,8 +91,9 @@ const projects = [
         iconColor: "from-pink-400 via-purple-500 to-purple-700",
         description: "Analytics dashboard for social media metrics with beautiful data visualizations, custom reports, and API integrations.",
         techStack: ["TypeScript", "Express.js", "PostgreSQL", "Chart.js"],
-        githubUrl: "#",
-        demoUrl: "#",
+        frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
+        demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
         gradient: "from-nebula-pink via-nebula-purple to-nebula-blue"
     },
     {
@@ -77,7 +102,9 @@ const projects = [
         iconColor: "from-yellow-500 to-blue-500",
         description: "Cross-platform fitness tracking mobile app with workout plans, progress monitoring, and social features for motivation.",
         techStack: ["React Native", "Firebase", "Redux"],
-        githubUrl: "#",
+        frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
+        demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
         gradient: "from-nebula-blue via-cosmic-teal to-cosmic-gold"
     },
     {
@@ -86,8 +113,9 @@ const projects = [
         iconColor: "from-yellow-500 to-blue-500",
         description: "AI-powered content generation tool using modern LLM APIs. Features template creation, custom prompts, and content optimization.",
         techStack: ["React", "OpenAI API", "Spring Boot", "Docker"],
-        githubUrl: "#",
-        demoUrl: "#",
+        frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
+        demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
         gradient: "from-cosmic-gold via-nebula-pink to-nebula-purple"
     },
 ];

@@ -10,7 +10,7 @@ import { skillCategories } from "@/data";
 
 function Skills() {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 mt-50">
+    <div className="flex flex-col items-center gap-5 mt-24 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       <motion.div
         animate={{ y: [0, -15, 0] }}
         transition={{
@@ -18,9 +18,9 @@ function Skills() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex lg:w-7xl w-2xl justify-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] text-white text-lg text-center"
+        className="flex w-full max-w-5xl justify-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] text-white text-lg text-center"
       >
-        <h1 className="font-orbitron lg:text-6xl text-5xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
           Skills & Technologies
         </h1>
       </motion.div>
@@ -32,9 +32,9 @@ function Skills() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="flex w-7xl justify-center"
+        className="flex justify-center w-full max-w-4xl text-center"
       >
-        <h1 className="text-xl text-white">
+        <h1 className="text-base sm:text-lg md:text-xl text-white">
           Exploring the cosmic expanse of modern development technologies
         </h1>
       </motion.div>
@@ -46,15 +46,28 @@ function Skills() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl text-white mt-10"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full mt-10 text-white"
       >
         {skillCategories.map((skill, index) => {
           const Icon = skill.icon;
 
           return (
-            <div
+            <motion.div
               key={index}
-              className="border border-blue-950 p-8 rounded-3xl bg-black/60 bg-blend-overlay duration-500 ease-in-out hover:bg-black/30 hover:brightness-110 hover:shadow-[0_0_20px_rgba(147,51,234,0.7),0_0_40px_rgba(59,130,246,0.6)]"
+              whileHover={{
+                scale: 1.05,
+                boxShadow:
+                  "0 0 20px rgba(147,51,234,0.7), 0 0 40px rgba(59,130,246,0.6)",
+              }}
+              whileTap={{
+                scale: 0.96,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
+              className="border border-blue-950 p-5 sm:p-8 rounded-3xl bg-black/60 bg-blend-overlay"
             >
               <div className="flex items-center gap-4">
                 <div
@@ -62,7 +75,7 @@ function Skills() {
                 >
                   <Icon className="w-8 h-8 text-black" />
                 </div>
-                <h1 className="text-2xl font-orbitron font-heading font-bold">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-orbitron font-heading font-bold">
                   {skill.title}
                 </h1>
               </div>
@@ -71,13 +84,13 @@ function Skills() {
                 {skill.skills.map((s, i) => (
                   <span
                     key={i}
-                    className="px-4 py-2 rounded-full text-s font-medium border border-purple-900 bg-blue-950"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium border border-purple-900 bg-blue-950"
                   >
                     {s}
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </motion.div>

@@ -8,13 +8,13 @@ const skillCategories = [
         iconColor: "from-purple-500 via-pink-300 to-pink-400",
         skills: ["React", "Tailwind CSS", "TypeScript", "HTML5", "CSS3", "JavaScript", "Bootstrap"]
     },
-    // {
-    //     title: "Backend Development",
-    //     icon: Server,
-    //     iconColor: "from-blue-600 via-cyan-500 to-cyan-300",
-    //     color: "from-nebula-blue to-cosmic-teal",
-    //     skills: ["Express.js", "Spring Boot", "JPA", "Java", "Node.js", "RESTful APIs"]
-    // },
+    {
+        title: "Backend Development",
+        icon: Server,
+        iconColor: "from-blue-600 via-cyan-500 to-cyan-300",
+        color: "from-nebula-blue to-cosmic-teal",
+        skills: ["Express.js", "Spring Boot", "JPA", "Java", "Node.js", "RESTful APIs"]
+    },
     {
         title: "Database Technologies",
         icon: Database,
@@ -63,50 +63,59 @@ const projects = [
         demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
         gradient: "from-nebula-purple via-nebula-blue to-cosmic-teal"
     },
-    // {
-    //     title: "E-Commerce Platform",
-    //     color: "from-emerald-300/60 via-amber-300/55 to-red-300/50",
-    //     iconColor: "from-yellow-500 to-blue-500",
-    //     description: "Collaborative task management application with real-time updates, team workspaces, and advanced filtering. Optimized for productivity.",
-    //     techStack: [
-    //         "React",
-    //         "Redux Toolkit",
-    //         "TailwindCSS",
-    //         "Framer Motion",
-    //         "Node.js",
-    //         "Express",
-    //         "MongoDB",
-    //         "Stripe Checkout",
-    //         "Clerk (Authentication)",
-    //         "TypeScript"
-    //     ],
-    //     frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
-    //     backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
-    //     demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
-    //     gradient: "from-cosmic-teal via-cosmic-gold to-nebula-pink"
-    // },
-    // {
-    //     title: "Social Media Dashboard",
-    //     color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
-    //     iconColor: "from-pink-400 via-purple-500 to-purple-700",
-    //     description: "Analytics dashboard for social media metrics with beautiful data visualizations, custom reports, and API integrations.",
-    //     techStack: ["TypeScript", "Express.js", "PostgreSQL", "Chart.js"],
-    //     frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
-    //     backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
-    //     demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
-    //     gradient: "from-nebula-pink via-nebula-purple to-nebula-blue"
-    // },
-    // {
-    //     title: "Mobile Fitness Tracker",
-    //     color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
-    //     iconColor: "from-yellow-500 to-blue-500",
-    //     description: "Cross-platform fitness tracking mobile app with workout plans, progress monitoring, and social features for motivation.",
-    //     techStack: ["React Native", "Firebase", "Redux"],
-    //     frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
-    //     backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
-    //     demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
-    //     gradient: "from-nebula-blue via-cosmic-teal to-cosmic-gold"
-    // },
+    {
+        title: "BookShelf",
+        color: "from-emerald-300/60 via-amber-300/55 to-red-300/50",
+        iconColor: "from-yellow-500 to-blue-500",
+        description: "BookShelf is an Android marketplace app for buying and selling second-hand books with secure payments and real-time Firebase backend. Users can browse, search, filter, add books, and contact sellers directly.",
+        techStack: [
+            "Android (Java)",
+            "Firebase Realtime Database",
+            "PayHere Payment Gateway",
+            "Google Maps / Location Services"
+        ],
+        frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
+        demoUrl: "https://github.com/Sakuni02/BookShelf-Android.git",
+        gradient: "from-cosmic-teal via-cosmic-gold to-nebula-pink"
+    },
+    {
+        title: "Thread - E-Commerce Platform",
+        color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
+        iconColor: "from-pink-400 via-purple-500 to-purple-700",
+        description: "A full-stack e-commerce platform for clothing Items, featuring product listing, category filtering, cart management and Stripe payment integration.",
+        techStack: [
+            "React",
+            "Redux Toolkit",
+            "TailwindCSS",
+            "Framer Motion",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Stripe Checkout",
+            "Clerk (Authentication)",
+            "TypeScript"
+        ],
+        frontGithubUrl: "https://github.com/Sakuni02/fed-2-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/fed-2-backend.git",
+        demoUrl: "https://fed-2-front-end-sakuni.netlify.app/",
+        gradient: "from-nebula-pink via-nebula-purple to-nebula-blue"
+    },
+    {
+        title: "Portfolio",
+        color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",
+        iconColor: "from-yellow-500 to-blue-500",
+        description: "A visually immersive, galaxy-inspired portfolio website built using React, Tailwind CSS, and Framer Motion, combining smooth animations with a dynamic starry video background.",
+        techStack: ["React",
+            "Redux Toolkit",
+            "TailwindCSS",
+            "Framer Motion",
+        ],
+        frontGithubUrl: "https://github.com/Sakuni02/electroMart-frontend.git",
+        backGithubUrl: "https://github.com/Sakuni02/electricShop-backend.git",
+        demoUrl: "https://electromart-frontend-sakuni.netlify.app/",
+        gradient: "from-nebula-blue via-cosmic-teal to-cosmic-gold"
+    },
     // {
     //     title: "AI Content Generator",
     //     color: "from-fuchsia-500/60 via-purple-700/55 to-indigo-800",

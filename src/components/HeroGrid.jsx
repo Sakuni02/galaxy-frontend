@@ -82,14 +82,21 @@ function HeroGride() {
               </p>
 
               <div className="flex shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] rounded-xl">
-                <Button
-                  className="font-orbitron px-8 py-5 text-sm sm:text-base bg-transparent border-none text-white"
-                  variant="outline"
-                  size="lg"
+                <a
+                  href="/resume/Sakuni_Sandakalmi_Resume.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </Button>
+                  <Button
+                    className="font-orbitron px-8 py-5 text-sm sm:text-base bg-transparent border-none text-white hover:cursor-pointer"
+                    variant="outline"
+                    size="lg"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Resume
+                  </Button>
+                </a>
               </div>
             </div>
 

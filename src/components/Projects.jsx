@@ -2,7 +2,24 @@ import { motion } from "framer-motion";
 import { Code, ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
 import { projects } from "@/data";
+import { useState } from "react";
+
 function Projects() {
+  const [startIndex, setStartIndex] = useState(0);
+  const projectsPerPage = 3;
+
+  const handleNext = () => {
+    if (startIndex + projectsPerPage < projects.length >= 0) {
+      setStartIndex(startIndex + projectsPerPage);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex - projectsPerPage >= 0) {
+      setStartIndex(startIndex - projectsPerPage);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center gap-5 mt-24 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
       <motion.div
@@ -34,49 +51,49 @@ function Projects() {
       </motion.div>
 
       <motion.div
-        animate={{ y: [0, -15, 0] }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        key={startIndex}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4 }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full mt-10 text-white"
       >
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className={`p-5 sm:p-8 rounded-3xl bg-gradient-to-br ${project.color} bg-black/60 bg-blend-overlay transition-all duration-500 ease-in-out hover:bg-black/30 hover:brightness-110 hover:shadow-[0_0_20px_rgba(147,51,234,0.7),0_0_40px_rgba(59,130,246,0.6)]`}
-          >
-            <div className="flex mb-4">
-              <div
-                className={`bg-gradient-to-br ${project.iconColor} p-3 rounded-xl shadow-[0_0_25px_rgba(6,182,212,0.9),0_0_60px_rgba(6,182,212,0.6)]`}
-              >
-                <Code className="w-5 h-5 text-black" />
-              </div>
-            </div>
-            <div className="flex">
-              <h1 className="text-lg sm:text-xl md:text-2xl font-orbitron font-heading font-bold">
-                {project.title}
-              </h1>
-            </div>
-
-            <div className="flex flex-wrap gap-3 mt-5">
-              <p>{project.description}</p>
-            </div>
-
-            <div className="flex flex-wrap gap-3 mt-5">
-              {project.techStack.map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 rounded-full text-xs font-medium border border-purple-900 bg-blue-950"
+        {projects
+          .slice(startIndex, startIndex + projectsPerPage)
+          .map((project, index) => (
+            <div
+              key={index}
+              className={`p-5 sm:p-8 rounded-3xl bg-gradient-to-br ${project.color} bg-black/60 bg-blend-overlay transition-all duration-500 ease-in-out hover:bg-black/30 hover:brightness-110 hover:shadow-[0_0_20px_rgba(147,51,234,0.7),0_0_40px_rgba(59,130,246,0.6)]`}
+            >
+              <div className="flex mb-4">
+                <div
+                  className={`bg-gradient-to-br ${project.iconColor} p-3 rounded-xl shadow-[0_0_25px_rgba(6,182,212,0.9),0_0_60px_rgba(6,182,212,0.6)]`}
                 >
-                  {tech}
-                </span>
-              ))}
-            </div>
+                  <Code className="w-5 h-5 text-black" />
+                </div>
+              </div>
+              <div className="flex">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-orbitron font-heading font-bold">
+                  {project.title}
+                </h1>
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mt-5">
-              {/* <a href={project.frontGithubUrl} className="flex-1">
+              <div className="flex flex-wrap gap-3 mt-5">
+                <p>{project.description}</p>
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-5">
+                {project.techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 rounded-full text-xs font-medium border border-purple-900 bg-blue-950"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 mt-5">
+                {/* <a href={project.frontGithubUrl} className="flex-1">
                 <Button
                   className="w-full rounded-xl  shadow-[0_0_25px_rgba(6,182,212,0.9),0_0_60px_rgba(6,182,212,0.6)]"
                   size="sm"
@@ -96,19 +113,36 @@ function Projects() {
                 </Button>
               </a> */}
 
-              <a href={project.demoUrl} className="flex-1">
-                <Button
-                  className="w-full rounded-xl  text-black font-semibold shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] bg-fuchsia-600"
-                  size="sm"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2 text-black" />
-                  Demo
-                </Button>
-              </a>
+                <a href={project.demoUrl} className="flex-1">
+                  <Button
+                    className="w-full rounded-xl  text-black font-semibold shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] bg-fuchsia-600"
+                    size="sm"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2 text-black" />
+                    Demo
+                  </Button>
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </motion.div>
+      <div className="flex gap-4 mt-8 justify-center">
+        <Button
+          onClick={handlePrev}
+          disabled={startIndex === 0}
+          className="rounded-full px-5 py-2"
+        >
+          ←
+        </Button>
+
+        <Button
+          onClick={handleNext}
+          disabled={startIndex + projectsPerPage >= projects.length}
+          className="rounded-full px-5 py-2"
+        >
+          →
+        </Button>
+      </div>
 
       <div className="flex mt-10 w-full justify-center shadow-[0_0_30px_rgba(147,51,234,0.6),0_0_60px_rgba(59,130,246,0.4)] rounded-xl">
         <Button
